@@ -1,0 +1,91 @@
+html {
+    font-size: .8rem;
+}
+
+body {
+    max-width: 767.98px;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+.card-slide {
+    .card {
+        &-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-text {
+                margin-bottom: unset;
+
+                .promotion {
+                    color: $danger;
+                }
+
+                small {
+                    color: $text-muted;
+                }
+            }
+
+            &-tags {
+                list-style-type: none;
+                padding-left: unset;
+
+                .badge {
+                    background-color: $primary;
+                    color: white;
+                }
+            }
+        }
+
+        &-flash-sale {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $primary;
+            color: white;
+            padding: .5rem 1rem;
+
+            &-text {
+                margin-bottom: unset;
+            }
+
+            &-time {
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+#navBottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 -0.5rem 1rem rgba(black, .075);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+
+    .nav {
+        &-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            font-size: .8rem;
+
+            i {
+                margin-right: .5rem;
+            }
+
+            &:nth-child(2) {
+                background-color: $primary;
+                color: white;
+                font-size: 1.25rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
