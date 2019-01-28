@@ -11,6 +11,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="./dist/plugins/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="./dist/plugins/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="./dist/plugins/jquery-bar-rating-master/dist/themes/fontawesome-stars.css">
     <link rel="stylesheet" href="./dist/css/style.min.css">
 
     <title>Demo 1</title>
@@ -57,16 +58,6 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sequi obcaecati, doloremque fuga vel
                 ratione provident accusantium saepe suscipit cum ad eum, qui inventore modi blanditiis exercitationem!
                 Ad, ducimus sunt?</p>
-            <!-- <ul>
-                <li>ทำจากผ้าสเวตซับในด้วยผ้าคอตตอนฟลีซ 100%</li>
-                <li>เนื้อผ้าด้านนอกเป็นเส้นใยหนาเพื่อความทนทานในสไตล์ลำลองและซับในด้วยผ้าเนื้อนุ่ม </li>
-                <li>สีสันให้ความรู้สึกสบายๆ สไตล์สปอร์ตี้ </li>
-                <li>ผ้าสเวตเหมาะสำหรับเสื้อผ้าทุกสไตล์และสวมใส่ได้ทุกโอกาส </li>
-                <li>ปรับดีไซน์ต้อนรับฤดูกาลใหม่! ปรับช่วงไหล่และช่วงแขนให้กว้างขึ้นเพื่อการขยับแขนที่คล่องตัว </li>
-                <li>แถบผ้าด้านข้างให้ลุคดูเพรียวและทรงหลวมสวมใส่สบาย </li>
-                <li>ฮู้ดไร้ตะเข็บและสายปรับกระชับสั้นกว่าเดิมเพื่อให้ดูสะอาดตาบริเวณช่วงลำคอ</li>
-                <li>มีสีสันให้เลือกมากมายทั้งสำหรับผู้หญิงและผู้ชาย</li>
-            </ul> -->
         </div>
     </div>
 
@@ -120,7 +111,17 @@
                                     <div class="media-body">
                                         <div class="media-header">
                                             <h6>Katlynn Cole</h6>
-                                            <small>2019-01-28</small>
+
+                                            <div class="text-right">
+                                                <small>2019-01-28</small>
+                                                <select class="satisfactionShow">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5" selected>5</option>
+                                                </select>
+                                            </div>
                                         </div>
                                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
                                         sollicitudin.
@@ -147,7 +148,16 @@
                                     <div class="media-body">
                                         <div class="media-header">
                                             <h6>Amya Stanton</h6>
-                                            <small>2019-01-28</small>
+                                            <div class="text-right">
+                                                <small>2019-01-28</small>
+                                                <select class="satisfactionShow">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3" selected>3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
                                         </div>
                                         Id ipsum blanditiis sunt minus nesciunt aut debitis delectus accusantium.
                                         Laudantium assumenda libero sed sit ut labore officiis aut laborum.
@@ -158,7 +168,16 @@
                                     <div class="media-body">
                                         <div class="media-header">
                                             <h6>Patsy Fisher</h6>
-                                            <small>2019-01-28</small>
+                                            <div class="text-right">
+                                                <small>2019-01-28</small>
+                                                <select class="satisfactionShow">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4" selected>4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
                                         </div>
                                         Et sed qui quas aliquid. Ut totam quis et officiis. Alias iure pariatur fugit.
                                     </div>
@@ -213,7 +232,13 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="">ระดับความพึงพอใจ</label>
-                                        <input type="text" class="form-control">
+                                        <select id="satisfaction">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                         <label for="">ฝากข้อความไว้</label>
@@ -329,6 +354,7 @@
     <script src="./dist/plugins/jquery.countdown-2.2.0/jquery.countdown.min.js"></script>
     <script src="./dist/js/bootstrap.bundle.min.js"></script>
     <script src="./dist/plugins/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="./dist/plugins/jquery-bar-rating-master/dist/jquery.barrating.min.js"></script>
     <script>
         $(document).ready(function () {
             $('.card-slide-img').slick({
@@ -368,6 +394,17 @@
                         window.location.hash = hash;
                     });
                 } // End if
+            });
+
+            // 
+            $(function () {
+                $('#satisfaction').barrating({
+                    theme: 'fontawesome-stars'
+                });
+                $('.satisfactionShow').barrating({
+                    theme: 'fontawesome-stars',
+                    readonly: true
+                });
             });
         });
     </script>
