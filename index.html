@@ -24,6 +24,14 @@
             <div><img src="./dist/images/slide-02.jpg" alt="slide"></div>
             <div><img src="./dist/images/slide-03.jpg" alt="slide"></div>
             <div><img src="./dist/images/slide-04.jpg" alt="slide"></div>
+            <div>
+                <div class="video">
+                    <video width="100%" controls>
+                        <source src="./dist/videos/mov_bbb.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </div>
         <div class="card-price">
             <h1 class="card-price-text"><span class="promotion">790฿</span> <small><del>990฿</del></small></h1>
@@ -167,8 +175,9 @@
                 // setting - name: setting - value
                 arrows: false,
                 dots: true,
-                autoplay: true,
+                // autoplay: true,
                 autoplaySpeed: 3000,
+                adaptiveHeight: true
             });
 
             // 
