@@ -11,7 +11,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="./dist/plugins/slick-1.8.1/slick/slick.css">
     <link rel="stylesheet" href="./dist/plugins/slick-1.8.1/slick/slick-theme.css">
-    <link rel="stylesheet" href="./dist/plugins/jquery-bar-rating-master/dist/themes/fontawesome-stars.css">
+    <link rel="stylesheet" href="./dist/plugins/jquery-bar-rating-master/dist/themes/css-stars.css">
     <link rel="stylesheet" href="./dist/css/style.min.css">
 
     <title>Demo 1</title>
@@ -239,6 +239,8 @@
                                             <option value="4">4</option>
                                             <option value="5">5</option>
                                         </select>
+                                        <div class="rateit" data-rateit-mode="font">
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="">ฝากข้อความไว้</label>
@@ -397,14 +399,14 @@
             });
 
             // 
-            $(function () {
-                $('#satisfaction').barrating({
-                    theme: 'fontawesome-stars'
-                });
-                $('.satisfactionShow').barrating({
-                    theme: 'fontawesome-stars',
-                    readonly: true
-                });
+            $('#satisfaction').barrating({
+                theme: 'css-stars',
+                showSelectedRating: false
+            });
+            $('.satisfactionShow').barrating({
+                theme: 'css-stars',
+                showSelectedRating: false,
+                readonly: true
             });
         });
     </script>
