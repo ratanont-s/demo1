@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+
+    <title>Demo 1</title>
+</head>
+
+<body class="bg-light">
+    <!-- Header -->
+    <header class="sticky-top shadow-sm py-1 bg-white">
+        <div class="d-flex align-items-center">
+            <a href="./index.html" class="btn btn-link"><i class="fas fa-chevron-left"></i></a>
+            <h5 class="flex-grow-1 text-center text-gradients mb-0">การยืนยันสั่งซื้อ </h5>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="py-3">
+        <div class="container-fluid">
+            <div class="card card-product">
+                <div class="row no-gutters">
+                    <div class="col-4">
+                        <img src="./dist/images/slide-01.jpg" alt="..." class="card-img w-100">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h5 class="card-title">เสื้อลำลอง มีฮู้ด แขนยาว</h5>
+                            <p class="card-text">ผ้าสเวตแท้ ดีไซน์ใหม่ที่เน้นรายละเอียดเพื่อให้ทรงเพรียวยิ่งกว่าเดิม</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form action="#" class="card card-form">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="inputName">ชื่อ <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" placeholder="ป้อนชื่อคุณหรือชื่อเล่นคุณ" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">โทรศัพท์ <span class="text-danger">*</span></label>
+                        <input type="tel" class="form-control" placeholder="กรุณากรอกหมายเลขโทรศัพท์ให้ถูกต้อง"
+                            maxlength="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">บ้านเลขที่ / ถนน / ซอย <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" placeholder="บ้านเลขที่ / ถนน / ซอย" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">แขวง / ตำบล <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" placeholder="แขวง / ตำบล" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">เขต / อำเภอ <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" placeholder="เขต / อำเภอ" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="selectCity">จังหวัด</label>
+                        <select id="selectCity" class="form-control">
+                            <option value="">กรุณาเลือกจังหวัด…</option>
+                            <option value="">กรุงเทพมหานครฯ</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">รหัสไปรษณีย์ <span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" placeholder="รหัสไปรษณีย์" maxlength="5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="textareaMessage">ฝากข้อความไว้ (ถ้ามี)</label>
+                        <textarea id="textareaMessage" rows="5" class="form-control" placeholder="หากคุณมีความต้องการอย่างอื่น กรุณาฝากข้อความไว้"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit rounded-pill btn-block">ส่งคำสั่งซื้อ</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-fluid text-center">
+            จ่ายเงินเมื่อได้รับสินค้า+ค่าขนส่งฟรี+การคืนหรือการเปลี่ยนสินค้าภายในเจ็ดวันเท่านั้นโดยกรุณาแนบชื่อและวิธีการติดต่อและหมายเลขการสั่งซื้อของคุณเพื่อให้เราบริการได้ดีขึ้น
+            ขอให้มีความสุข ในการใช้บริการ <a href="mailto:example@mail.com">example@mail.com</a>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <script src="./dist/js/jquery-3.3.1.min.js"></script>
+    <script src="./dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

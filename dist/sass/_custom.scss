@@ -5,6 +5,10 @@ body {
     padding-bottom: 60px;
 }
 
+header {
+    padding-right: 34px;
+}
+
 .text-gradients {
     // @include gradient-directional($start-color: $primary, $end-color: $secondary, $deg: 45deg);
     @include gradient-x($start-color: $primary, $end-color: $secondary, $start-percent: 0%, $end-percent: 150%);
@@ -363,4 +367,36 @@ body {
 
 .modal-backdrop.show {
     opacity: .8;
+}
+
+.card-product {
+    border-radius: .5rem;
+    border: unset;
+    // background-color: $light;
+    box-shadow: $box-shadow-sm;
+    margin-bottom: 1.25rem;
+
+    .card {
+        &-img {
+            border-radius: inherit;
+        }
+    }
+}
+
+.card-form {
+    border-radius: .5rem;
+    border: unset;
+    box-shadow: $box-shadow-sm;
+    margin-bottom: 1.25rem;
+
+    .btn-submit {
+        @include gradient-directional($start-color: $primary, $end-color: $secondary, $deg: 45deg);
+        background-clip: padding-box;
+        color: white;
+
+        @include hover-focus {
+            @include gradient-directional($start-color: darken($primary, 10%), $end-color:darken($secondary, 10%), $deg: 45deg);
+            background-clip: padding-box;
+        }
+    }
 }
