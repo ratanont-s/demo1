@@ -391,6 +391,9 @@ header {
     .card {
         &-img {
             border-radius: inherit;
+            height: 100%;
+            width: auto;
+            object-fit: cover;
         }
     }
 }
@@ -436,20 +439,6 @@ header {
             font-weight: 700;
             display: block;
             text-align: center;
-        }
-
-        .input-group {
-            &-prepend .btn {
-                border-radius: 1rem;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-            }
-
-            &-append .btn {
-                border-radius: 1rem;
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-            }
         }
 
         #inputQuantity {
