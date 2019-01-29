@@ -9,6 +9,7 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="./dist/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css">
     <link rel="stylesheet" href="./dist/css/style.min.css">
 
     <title>Demo 1</title>
@@ -41,28 +42,139 @@
             </div>
 
             <!-- Form -->
-            <form action="#" class="card card-form">
-                <div class="card-body">
+            <form action="#">
+                <div class="card card-body card-form">
+                    <div class="form-group form-group-color">
+                        <label for="">สี</label>
+                        <div class="form-row">
+                            <div class="col-4 form-group">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio1">
+                                        <div class="product-color">
+                                            <img src="./dist/images/slide-01.jpg" alt="...">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-4 form-group">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio2">
+                                        <div class="product-color">
+                                            <img src="./dist/images/product-red.png" alt="...">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-4 form-group">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio3">
+                                        <div class="product-color">
+                                            <img src="./dist/images/product-yellow.png" alt="...">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-4 form-group">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio4">
+                                        <div class="product-color">
+                                            <img src="./dist/images/product-green.png" alt="...">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-4 form-group">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio5">
+                                        <div class="product-color">
+                                            <img src="./dist/images/product-sky.png" alt="...">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-4 form-group">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadio6">
+                                        <div class="product-color">
+                                            <img src="./dist/images/product-pink.png" alt="...">
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">ขนาด</label>
+                        <div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline1">S</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline2">M</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline3">L</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline4">XL</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline5" name="customRadioInline1" class="custom-control-input">
+                                <label class="custom-control-label" for="customRadioInline5">XXL</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-6 form-group form-group-sum">
+                            <label for="inputQuantity">จำนวน</label>
+                            <input id="inputQuantity" type="text" value="0" name="inputQuantity">
+                        </div>
+                        <div class="col-6 form-group form-group-sum">
+                            <label for="sumPrice">รวมราคาทั้งหมด</label>
+
+                            <div class="input-group">
+                                <input id="sumPrice" type="text" value="790" name="sumPrice" class="form-control"
+                                    readonly>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">฿</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-form card-body">
                     <div class="form-group">
                         <label for="inputName">ชื่อ <span class="text-danger">*</span></label>
                         <input type="text" class="form-control" placeholder="ป้อนชื่อคุณหรือชื่อเล่นคุณ" required>
                     </div>
                     <div class="form-group">
-                        <label for="inputName">โทรศัพท์ <span class="text-danger">*</span></label>
-                        <input type="tel" class="form-control" placeholder="กรุณากรอกหมายเลขโทรศัพท์ให้ถูกต้อง"
+                        <label for="inputTel">โทรศัพท์ <span class="text-danger">*</span></label>
+                        <input id="inputTel" type="tel" class="form-control" placeholder="กรุณากรอกหมายเลขโทรศัพท์ให้ถูกต้อง"
                             maxlength="10" required>
                     </div>
                     <div class="form-group">
-                        <label for="inputName">บ้านเลขที่ / ถนน / ซอย <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" placeholder="บ้านเลขที่ / ถนน / ซอย" required>
+                        <label for="inputAddress1">บ้านเลขที่ / ถนน / ซอย <span class="text-danger">*</span></label>
+                        <input id="inputAddress1" type="text" class="form-control" placeholder="บ้านเลขที่ / ถนน / ซอย"
+                            required>
                     </div>
                     <div class="form-group">
-                        <label for="inputName">แขวง / ตำบล <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" placeholder="แขวง / ตำบล" required>
+                        <label for="inputAddress2">แขวง / ตำบล <span class="text-danger">*</span></label>
+                        <input id="inputAddress2" type="text" class="form-control" placeholder="แขวง / ตำบล" required>
                     </div>
                     <div class="form-group">
-                        <label for="inputName">เขต / อำเภอ <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" placeholder="เขต / อำเภอ" required>
+                        <label for="inputAddress3">เขต / อำเภอ <span class="text-danger">*</span></label>
+                        <input id="inputAddress3" type="text" class="form-control" placeholder="เขต / อำเภอ" required>
                     </div>
                     <div class="form-group">
                         <label for="selectCity">จังหวัด</label>
@@ -72,8 +184,9 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="inputName">รหัสไปรษณีย์ <span class="text-danger">*</span></label>
-                        <input type="number" class="form-control" placeholder="รหัสไปรษณีย์" maxlength="5" required>
+                        <label for="inputPostCode">รหัสไปรษณีย์ <span class="text-danger">*</span></label>
+                        <input id="inputPostCode" type="number" class="form-control" placeholder="รหัสไปรษณีย์"
+                            maxlength="5" required>
                     </div>
                     <div class="form-group">
                         <label for="textareaMessage">ฝากข้อความไว้ (ถ้ามี)</label>
@@ -95,6 +208,13 @@
     <!-- Optional JavaScript -->
     <script src="./dist/js/jquery-3.3.1.min.js"></script>
     <script src="./dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./dist/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script>
+        $("input[name='inputQuantity']").TouchSpin({
+            buttondown_class: "btn btn-light",
+            buttonup_class: "btn btn-light"
+        });
+    </script>
 </body>
 
 </html>

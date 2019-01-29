@@ -2,7 +2,7 @@ body {
     position: relative;
     max-width: 767.98px;
     margin: 0 auto;
-    padding-bottom: 60px;
+    // padding-bottom: 80px;
 }
 
 header {
@@ -10,8 +10,8 @@ header {
 }
 
 .text-gradients {
-    // @include gradient-directional($start-color: $primary, $end-color: $secondary, $deg: 45deg);
-    @include gradient-x($start-color: $primary, $end-color: $secondary, $start-percent: 0%, $end-percent: 150%);
+    //  @include gradient-directional($start-color: $primary, $end-color: darken($primary,10%), $deg: 45deg);
+    @include gradient-x($start-color: $primary, $end-color: darken($primary, 10%), $start-percent: 0%, $end-percent: 150%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -44,8 +44,8 @@ header {
                     width: 100%;
                     height: 100%;
                     // background-color: rgba($primary, .9);
-                    @include gradient-directional($start-color: $primary, $end-color: $secondary, $deg: 45deg);
-                    opacity: .9;
+                    @include gradient-directional($start-color: $primary, $end-color: darken($primary, 10%), $deg: 45deg);
+                    opacity: .8;
                     z-index: 2;
                 }
 
@@ -109,18 +109,12 @@ header {
 
                 small {
                     color: $text-muted;
+                    font-size: 50%;
+                    vertical-align: middle;
                 }
             }
 
-            &-tags {
-                list-style-type: none;
-                padding-left: unset;
 
-                .badge {
-                    background-color: $primary;
-                    color: white;
-                }
-            }
         }
 
         &-flash-sale {
@@ -142,7 +136,7 @@ header {
                 width: 100%;
                 height: 100%;
                 // background-color: rgba($primary, .9);
-                @include gradient-directional($start-color: $primary, $end-color: $secondary, $deg: 45deg);
+                @include gradient-directional($start-color: $primary, $end-color: darken($primary, 10%), $deg: 45deg);
                 opacity: .9;
 
             }
@@ -185,6 +179,16 @@ header {
             box-shadow: $box-shadow-sm;
             font-weight: 500;
 
+            &-tags {
+                list-style-type: none;
+                padding-left: unset;
+
+                .badge {
+                    background-color: $secondary;
+                    color: white;
+                }
+            }
+
             &-logo {
                 img {
                     height: 1.25rem;
@@ -210,7 +214,7 @@ header {
 
             @include hover-focus {
                 // background-color: $primary;
-                @include gradient-directional($start-color: $primary, $end-color: $secondary, $deg: 45deg);
+                @include gradient-directional($start-color: $primary, $end-color: darken($primary, 10%), $deg: 45deg);
                 color: white;
             }
 
@@ -237,7 +241,7 @@ header {
 
         .card {
             &-header {
-                @include gradient-directional($start-color: $primary, $end-color: $secondary, $deg: 45deg);
+                @include gradient-directional($start-color: $primary, $end-color: darken($primary, 10%), $deg: 45deg);
                 color: white;
                 border: unset;
                 border-top-left-radius: inherit;
@@ -330,6 +334,7 @@ header {
 
 #ProductWarranty {
     border-top: 2px solid $light;
+    padding-bottom: 6rem;
 }
 
 #navBottom {
@@ -344,20 +349,27 @@ header {
     .nav {
         &-link {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: left;
             font-size: .7rem;
             padding: .5rem .5rem;
+            background-color: $secondary;
+            // @include gradient-directional($start-color: $secondary, $end-color: darken($secondary, 10%), $deg: 45deg);
+            color: white;
+            text-align: center;
 
             i {
-                margin-right: .5rem;
+                font-size: 1.25rem;
+                margin-bottom: .25rem;
+                // margin-right: .5rem;
             }
 
             &:nth-child(2) {
                 // background-color: $primary;
-                @include gradient-directional($start-color: $primary, $end-color: $secondary, $deg: 45deg);
-                color: white;
+                @include gradient-directional($start-color: $primary, $end-color: darken($primary, 10%), $deg: 45deg);
+
                 font-size: 1rem;
                 font-weight: 500;
             }
@@ -390,7 +402,7 @@ header {
     margin-bottom: 1.25rem;
 
     .btn-submit {
-        @include gradient-directional($start-color: $primary, $end-color: $secondary, $deg: 45deg);
+        @include gradient-directional($start-color: $primary, $end-color: darken($primary, 10%), $deg: 45deg);
         background-clip: padding-box;
         color: white;
 
@@ -399,4 +411,67 @@ header {
             background-clip: padding-box;
         }
     }
+
+    .form-group-color {
+        .product-color {
+            border-radius: .5rem;
+            overflow: hidden;
+            opacity: .75;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .custom-control-input:checked~.custom-control-label {
+            .product-color {
+                opacity: 1;
+                box-shadow: $box-shadow-sm;
+            }
+        }
+    }
+
+    .form-group-sum {
+        label {
+            font-weight: 700;
+            display: block;
+            text-align: center;
+        }
+
+        .input-group {
+            &-prepend .btn {
+                border-radius: 1rem;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            &-append .btn {
+                border-radius: 1rem;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+
+        #inputQuantity {
+            text-align: center;
+
+
+        }
+
+        #sumPrice {
+            padding-right: 0;
+
+            +.input-group-append .input-group-text {
+                color: $danger;
+            }
+        }
+
+        #sumPrice {
+            color: $danger;
+            font-weight: 700;
+            font-size: 1rem;
+            text-align: right;
+        }
+    }
+
 }
